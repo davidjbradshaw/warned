@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Meedoen"
+  description="Sluit je aan bij het WARNED-team als vrijwilliger, artiest of workshop-instructeur"
+  lang="nl"
+  currentPath="join"
+>
+  <div class="page-header">
+    <div class="container">
+      <h1>MEEDOEN</h1>
+      <p>DANS met ons mee!</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="intro-section">
+      <h2>Laten We Het Verschil Maken - Samen</h2>
+
+      <h3>Waarom bij Ons Aansluiten?</h3>
+      <p class="lead">
+        Wij zijn een internationaal collectief van multidisciplinair personeel, vrijwilligers, artiesten, kunstenaars en instructeurs van alle leeftijden en met verschillende achtergronden. Sommigen van ons hebben elkaar ontmoet via Burner-evenementen (artistieke evenementen die de principes en waarden van het Amerikaanse Burning Man-festival delen, d.w.z. ruimdenkendheid, zelfexpressie, geven, delen, respect voor anderen en hun omgeving, autonomie), sommigen komen uit het ondernemers- of bedrijfsuniversum, anderen uit de amusementswereld en nog anderen uit de medische en de verzorgende sectoren.
+      </p>
+      <p class="highlight">
+        <strong>Maar er is één ding dat we allemaal met elkaar gemeen hebben:</strong> het verlangen om GOLDIES te helpen reactiveren op sociaal, professioneel en emotioneel vlak.
+      </p>
+      <p class="lead">
+        Voornamelijk gevestigd in Brussel en Amsterdam, stroomt ons collectief over van energie om onze gemeenschap van GOLDIES te betrekken en de derde leeftijd met vertrouwen en trots te vieren. Alles is geïnspireerd en ontworpen om het FLAMINGOLD op te wekken die in ons allemaal, jong of oud, sluimert. In de geest van samenwerking en co-creatie zijn we consequent op zoek naar uitbreiding van onze drijvende kracht - daarmee bedoelen we JOU!
+      </p>
+      <p class="lead">
+        Of het nu gaat om het doneren van je kostbare tijd of je unieke vaardigheden, we kunnen van je leren en dit culturele en sociale project samen laten groeien.
+      </p>
+    </div>
+
+    <h2>Hoe Meedoen ?</h2>
+
+    <div class="opportunity-card">
+      <h3>🎭 Sluit je aan bij Team Thé Dansant</h3>
+      <p>
+        Kom het team versterken dat onze extravagante amusementsmiddag, Thé Dansant, produceert! Thé Dansant is altijd op zoek naar nieuwe vrijwilligers om de GOLDIES te helpen voorbereiden, verwelkomen, bedienen, begeleiden en vergezellen tijdens dit fantastische evenement. We zijn er trots op een luxueuze, attente en unieke Engelse Afternoon Tea-ervaring te bieden.
+      </p>
+      <p><strong>Neem contact met ons op door het formulier onderaan de pagina in te vullen.</strong></p>
+    </div>
+
+    <div class="opportunity-card">
+      <h3>🌿 Thé au Jardin</h3>
+      <p>
+        Kom het team versterken in de organisatie, de receptie en het beheer van Thé au Jardin. We zijn altijd op zoek naar nieuwe vrijwilligers om onze Thé au Jardin-activiteiten voor te bereiden of om onze GOLDIES te verwelkomen en te begeleiden. We zijn ook actief op zoek naar mensen die deel willen uitmaken van het onderhoudsteam van Ukkel Freespace (herstellingen, tuinieren, klaarzetten). We hebben een breed takenpakket en bieden veel verschillende verantwoordelijkheden om van Thé au Jardin een bevredigende en veilige omgeving te maken voor onze GOLDIES.
+      </p>
+    </div>
+
+    <div class="opportunity-card">
+      <h3>🎨 Artist or Workshop Instructor</h3>
+      <p>
+        Creativiteit bloeit bij ons! Ben je een artiest? We horen graag van degenen die in cabaret, muziek en uitvoerende kunst werken om bij te dragen aan onze "Thee" -evenementen.
+      </p>
+      <p>
+        Wil je een workshop leiden? We zijn altijd blij om te spreken met gekwalificeerde professionals op het gebied van wellness, therapie, spiritualiteit, uitvoerende kunst, creatieve bezigheden en sport om ons wekelijkse programma te verbeteren.
+      </p>
+    </div>
+
+    <div class="opportunity-card">
+      <h3>💼 WARNED Stagiair</h3>
+      <p>
+        Heb je een voorkeur voor evenementen en ondernemerschap, ben je gevoelig voor de sociale economie, of ben je op zoek naar een samenwerkingsstage die zowel strategische/organisatorische als operationele activiteiten combineert?
+      </p>
+      <p>We horen graag van je!</p>
+    </div>
+
+    <div class="cta-section">
+      <h2>Klaar om Mee te Doen?</h2>
+      <p>Neem contact op en laten we samen het verschil maken!</p>
+      <a href="mailto:info@warned.plus" class="button">Neem contact op</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+
+  .opportunity-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 4px solid var(--color-accent);
+    transition: all 0.3s ease;
+  }
+
+  .opportunity-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .opportunity-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-radius: 12px;
+    margin-top: 3rem;
+  }
+
+  .cta-section h2 {
+    color: #fff;
+  }
+
+  .cta-section .button {
+    background: #fff;
+    color: var(--color-primary);
+  }
+</style>

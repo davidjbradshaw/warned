@@ -4,58 +4,127 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Join Us"
-  description="Become a member of WARNED and join our vibrant community of active retirees"
+  description="Join the WARNED team as a volunteer, artist, or workshop instructor"
   lang="en"
   currentPath="join"
 >
   <div class="page-header">
     <div class="container">
-      <h1>Join WARNED</h1>
-      <p>Become part of our community</p>
+      <h1>JOIN</h1>
+      <p>Join, Engage, Transform Now</p>
     </div>
   </div>
 
   <div class="content-section">
-    <h2>Membership Benefits</h2>
-    <ul class="benefits-list">
-      <li>Access to all WARNED events and activities</li>
-      <li>Connect with fellow active retirees</li>
-      <li>Participate in cultural and social programs</li>
-      <li>Stay active and engaged in the community</li>
-    </ul>
+    <div class="intro-section">
+      <h2>Let's Make A Difference - Together</h2>
 
-    <div class="membership-info">
-      <h3>How to Join</h3>
-      <p>To learn more about membership and how to join, please contact us:</p>
-      <p><strong>Email:</strong> <a href="mailto:info@warned.plus">info@warned.plus</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+32497755275">(+32) 497 75 52 75</a></p>
+      <h3>Why Join Us?</h3>
+      <p class="lead">
+        We are an international collective of multidisciplinary staff, volunteers, artists, performers and instructors of all ages who come from diverse backgrounds. While some have met through "Burner" events - artistic events that share the principles and values ​​of the U.S. Burning Man festival i.e. open-mindedness, self-expression, giving, sharing, respect for others and their environment, autonomy - some hail from the entrepreneurial or corporate universe, some from the field of entertainment sphere, and others from the medical and caring professions.
+      </p>
+      <p class="highlight">
+        <strong>What do they have in common?</strong> The desire to help reactivate GOLDIES socially, professionally and emotionally.
+      </p>
+      <p class="lead">
+        Based primarily in Brussels and Amsterdam, our collective overflows with energy to engage our community of GOLDIES and celebrate the third act with confidence and pride. Everything is inspired and designed to awaken the FLAMINGOLD that lies dormant in all of us, young or old. In the spirit of collaboration, and co-creation, we are consistently seeking to expand our driving force - that is YOU!
+      </p>
+      <p class="lead">
+        Whether it's donating your precious time or your unique skills, we can learn from you and grow this cultural and social project together.
+      </p>
+    </div>
+
+    <h2>How To Get Involved</h2>
+
+    <div class="opportunity-card">
+      <h3>🎭 Thé Dansant</h3>
+      <p>
+        Come and join the team that produces our extravagant afternoon of entertainment, Thé Dansant! Thé Dansant is always looking for new volunteers to help prepare, welcome, serve, supervise and accompany the GOLDIES during this fabulous event. We take pride in providing a luxurious, attentive and unique English Afternoon Tea experience.
+      </p>
+      <p><strong>Contact us by filling in the form at the base of the page.</strong></p>
+    </div>
+
+    <div class="opportunity-card">
+      <h3>🌿 Thé au Jardin</h3>
+      <p>
+        Come and join the team in the organization, reception and management of the Thé au Jardin. We are always looking for new volunteers to help prepare our Thé au Jardin activities or welcome and supervise our GOLDIES. We also actively seek those who would like to become part of the Uccle Freespace maintenance team (repairs, gardening, set-up). We have many roles, tasks and responsibilities in ensuring that the Thé au Jardin agenda provides a fulfilling and safe environment for our GOLDIES.
+      </p>
+    </div>
+
+    <div class="opportunity-card">
+      <h3>🎨 Artist or Workshop Instructor</h3>
+      <p>
+        Creativity blooms with us! Are you an entertainer? We would love to hear from those working in the fields of cabaret, music, and artistic performance to contribute to our Thé events. Alternatively, do you fancy leading a workshop? We are always happy to speak to skilled professionals in the fields of wellness, therapy, spirituality, artistic performance, creative pursuits, and sport to enhance our weekly programme of activities.
+      </p>
+    </div>
+
+    <div class="opportunity-card">
+      <h3>💼 WARNED Intern</h3>
+      <p>
+        Do you have a taste for events and entrepreneurship, are you sensitive to the social economy, or are you looking for a collaborative internship that mixes both strategic/organizational and operational activities?
+      </p>
+      <p>We'd love to hear from you!</p>
+    </div>
+
+    <div class="cta-section">
+      <h2>Ready to Join?</h2>
+      <p>Get in touch and let's make a difference together!</p>
+      <a href="mailto:info@warned.plus" class="button">Contact Us</a>
     </div>
   </div>
 </BaseLayout>
 
 <style>
-  .benefits-list {
-    margin: 2rem 0;
-    padding-left: 2rem;
-  }
-
-  .benefits-list li {
-    margin-bottom: 1rem;
+  .lead {
     font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
   }
 
-  .membership-info {
-    margin-top: 3rem;
-    padding: 2rem;
-    background: #f5f5f5;
+  .highlight {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
     border-radius: 8px;
+    margin: 2rem 0;
   }
 
-  .membership-info h3 {
+  .opportunity-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 4px solid var(--color-accent);
+    transition: all 0.3s ease;
+  }
+
+  .opportunity-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .opportunity-card h3 {
+    color: var(--color-primary);
     margin-bottom: 1rem;
   }
 
-  .membership-info p {
-    margin-bottom: 0.5rem;
+  .cta-section {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-radius: 12px;
+    margin-top: 3rem;
+  }
+
+  .cta-section h2 {
+    color: #fff;
+  }
+
+  .cta-section .button {
+    background: #fff;
+    color: var(--color-primary);
   }
 </style>

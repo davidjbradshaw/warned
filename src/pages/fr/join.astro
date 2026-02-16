@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Rejoindre"
+  description="Rejoignez l'équipe WARNED en tant que bénévole, artiste ou animateur d'atelier"
+  lang="fr"
+  currentPath="join"
+>
+  <div class="page-header">
+    <div class="container">
+      <h1>REJOINDRE</h1>
+      <p>Ça Danse!</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="intro-section">
+      <h2>Faisons la Différence - Ensemble</h2>
+
+      <h3>Pourquoi nous rejoindre ?</h3>
+      <p class="lead">
+        Nous sommes un collectif international et multidisciplinaire, de bénévoles, d'artistes, d'animateur.es et d'instructeur.es de tous âges qui viennent d'horizons divers. Si certains se sont rencontrés à travers des événements "Burner" - des événements artistiques qui partagent les principes et les valeurs du festival américain Burning Man à savoir l'ouverture d'esprit, l'expression de soi, le don, le partage, le respect de l'autre et de son environnement, l'autonomie - d'autres sont issus de l'univers entrepreneurial ou corporatif, ou évoluent dans les domaines de l'art et du divertissement, ou encore exercent des professions médicales et soignantes.
+      </p>
+      <p class="highlight">
+        <strong>Leur point commun?</strong> Le désir d'aider à réactiver GOLDIES socialement, professionnellement et émotionnellement.
+      </p>
+      <p class="lead">
+        Basé principalement à Bruxelles et à Amsterdam, notre collectif déborde d'énergie pour embarquer avec notre communauté de GOLDIES et célébrer le troisième âge avec confiance et fierté. Tout est inspiré et conçu pour réveiller le FLAMINGOLD qui sommeille en chacun de nous, jeune ou vieux. Dans un esprit de collaboration et de co-création, nous cherchons constamment à étendre notre force motrice - c'est-à-dire VOUS!
+      </p>
+      <p class="lead">
+        Qu'il s'agisse de donner de votre temps précieux ou de vos compétences spécifiques, nous pouvons apprendre de vous et développer ensemble ce projet culturel et social.
+      </p>
+    </div>
+
+    <h2>Comment s'impliquer ?</h2>
+
+    <div class="opportunity-card">
+      <h3>🎭 Rejoins l'équipe du Thé Dansant</h3>
+      <p>
+        Joins-toi à l'équipe qui produit le Thé Dansant "Don't You Dare call Us Old!", cet extravagant après-midi de divertissement. WARNED est toujours à la recherche de bénévoles pour aider à préparer la salle, puis accueillir, servir, encadrer et accompagner les GOLDIES lors de ce fabuleux événement. Nous sommes fiers d'offrir une expérience unique de tea time anglais luxueuse et attentionnée.
+      </p>
+      <p><strong>Contacte-nous en remplissant le formulaire en bas de page.</strong></p>
+    </div>
+
+    <div class="opportunity-card">
+      <h3>🌿 Thé au Jardin</h3>
+      <p>
+        Viens rejoindre l'équipe dans l'organisation, l'accueil et la gestion du Thé au Jardin. Nous sommes toujours à la recherche de nouveaux bénévoles pour aider à préparer nos activités, accueillir et encadrer les GOLDIES au Jardin. Nous cherchons également à renforcer l'équipe en charge de la maintenance de notre espace à Uccle (dépannage, jardinage, aménagement). Nous avons enfin régulièrement besoin de renforts pour nous assurer que l'agenda Thé au Jardin offre un environnement à la fois épanouissant et sécuritaire pour les GOLDIES.
+      </p>
+    </div>
+
+    <div class="opportunity-card">
+      <h3>🎨 Rejoins-nous comme Artiste ou Animateur.e d'Atelier</h3>
+      <p>
+        La créativité s'épanouit avec nous! Es-tu artiste ? Nous aimerions beaucoup rencontrer ceux et celles qui travaillent dans les domaines du cabaret, du cirque, de la musique ou encore de la performance artistique, et étudier ensemble comment tu pourrais participer à nos événements "Thé".
+      </p>
+      <p>
+        Tu as envie d'animer un atelier? Nous cherchons constamment à étendre et enrichir notre programmation hebdomadaire. Nous sommes toujours heureux de parler avec des professionnels qualifiés dans les domaines du bien-être, de la thérapie, de la spiritualité, de la performance artistique, des activités créatives et du sport.
+      </p>
+    </div>
+
+    <div class="opportunity-card">
+      <h3>💼 Stage chez WARNED</h3>
+      <p>
+        Tu as le goût des événements et de l'entrepreneuriat, tu es sensible à l'économie sociale, ou tu cherches un stage collaboratif qui mélange des activités stratégiques/organisationnelles et opérationnelles?
+      </p>
+      <p>Nous aimerions beaucoup te rencontrer!</p>
+    </div>
+
+    <div class="cta-section">
+      <h2>Prêt à nous rejoindre?</h2>
+      <p>Contactez-nous et faisons la différence ensemble!</p>
+      <a href="mailto:info@warned.plus" class="button">Contactez-nous</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+
+  .opportunity-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 4px solid var(--color-accent);
+    transition: all 0.3s ease;
+  }
+
+  .opportunity-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .opportunity-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-radius: 12px;
+    margin-top: 3rem;
+  }
+
+  .cta-section h2 {
+    color: #fff;
+  }
+
+  .cta-section .button {
+    background: #fff;
+    color: var(--color-primary);
+  }
+</style>

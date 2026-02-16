@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Thé Dansant"
+  description="Don't You Dare Call Us Old - Glamoureuze theeparty's met live entertainment, dansen en socialiseren voor de GOLDIE gemeenschap 65+"
+  lang="nl"
+  currentPath="the-dansant"
+>
+  <div class="page-header">
+    <div class="container">
+      <h1>Thé Dansant</h1>
+      <p>"Don't You Dare Call Us Old"</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="intro-section">
+      <p class="lead">
+        Drinken, eten, dansen, zingen, plezier maken: dat is het motto van Thé Dansant "Don't You Dare Call Us Old".
+      </p>
+      <p class="lead">
+        In een ruimte die exclusief is gereserveerd en ontworpen voor onze GOLDIE-gemeenschap (65+) worden deelnemers uitgenodigd om een ​​glamoureuze, maar ongebruikelijke Engelse Afternoon Tea te ervaren, compleet met netjes geklede servers, glanzend zilverwerk en veel bubbels. Deze Mad Hatter's Tea Party wordt begeleid door een extravagant burlesque cabaret, liveshows, duizelingwekkende dj's, circusartiesten, dansende bingo en oorverdovende karaoke - allemaal in de geest van het Amerikaanse festival Burning Man!
+      </p>
+      <p class="goal"><strong>Ons doel is simpel:</strong> entertainen, betrekken, verbinden, vreugde brengen, je de tijd laten vergeten en je laten glimlachen.</p>
+    </div>
+
+    <h2>Wat te Verwachten</h2>
+    <div class="grid grid-2">
+      <div class="feature-card">
+        <h3>☕ Afternoon Tea</h3>
+        <p>Een Engelse afternoon tea. Vier in stijl met mede-GOLDIES</p>
+      </div>
+      <div class="feature-card">
+        <h3>🎵 Muziek</h3>
+        <p>Live muziek en een DJ brengen je in beweging!</p>
+      </div>
+      <div class="feature-card">
+        <h3>💃 Dansen</h3>
+        <p>Ga de dansvloer op, GOLDIE!</p>
+      </div>
+      <div class="feature-card">
+        <h3>🎭 Entertainment</h3>
+        <p>Laat je vermaken door onze burlesque-, cabaret- en circusartiesten. Doe mee met ons karaokefeest.</p>
+      </div>
+      <div class="feature-card">
+        <h3>❤️ Attente Gastheren</h3>
+        <p>Ons team van toegewijde vrijwilligers - begroeters, gastheren, servers en metgezellen - is uitsluitend gericht op uw behoeften.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🤝 Vriendschap</h3>
+        <p>Ontmoet nieuwe mensen en maak opnieuw contact met oude vrienden tijdens dit vrolijke en extravagante evenement. Ontmoet nieuwe vrienden en zie oude bekenden terug.</p>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h2>Evenement Details</h2>
+      <p><strong>Prijs:</strong> Vrije prijs</p>
+      <p><strong>Reserveren:</strong> Verplicht</p>
+      <p><strong>Versnaperingen:</strong> Engelse thee, bubbels, cabaret, live muziek, DJ en dans</p>
+      <p>Voor aankomende data en locaties, bekijk onze kalender of Facebook-pagina.</p>
+    </div>
+
+    <h2>Thé Dansant Voordeelen</h2>
+    <div class="grid grid-2">
+      <div class="benefit-card">
+        <h3>Persoonlijke Relaties</h3>
+        <p>Ontmoet nieuwe mensen en maak nieuwe vrienden terwijl je geniet van afternoon tea en de dansvloer betreedt!</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Spontaniteit en Nieuwsgierigheid</h3>
+        <p>Open je geest voor gloednieuwe ervaringen en verschillende soorten mensen.</p>
+      </div>
+    </div>
+
+    <h2>Wie is welkom</h2>
+    <p>
+      GOLDIES! Of je nu single, getrouwd, gescheiden, weduwe/weduwnaar bent, in een vrije relatie zit, en wat je politieke overtuigingen, religie, geslacht, seksualiteit of levensstandaard ook zijn, we verwelkomen alle 65-plussers met enthousiasme!
+    </p>
+    <p>
+      WARNED verwelkomt GOLDIES van alle pluimage... degenen die graag hardop lachen, zingen als operadiva's, dansen alsof niemand kijkt, zich onconventioneel kleden, opscheppen - en degenen die gewoon een rustig gesprek verkiezen bij een kopje thee.
+    </p>
+    <p>
+      We verwelkomen vooral GOLDIES die in hun dagelijks leven sociaal isolement of financiële problemen ervaren. Thé Dansant is een laagdrempelig, betaalbaar evenement waar iedereen van kan genieten.
+    </p>
+
+    <div class="cta-section">
+      <h2>Sluit je aan bij ons</h2>
+      <p>Klaar om te dansen, te lachen en te vieren met ons?</p>
+      <a href="mailto:info@warned.plus" class="button">Neem contact op</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .goal {
+    font-size: 1.1rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+
+  .feature-card, .benefit-card {
+    padding: 1.5rem;
+    background: #fff;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover, .benefit-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .feature-card h3, .benefit-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+  }
+
+  .info-box {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+    border-left: 4px solid var(--color-accent);
+  }
+
+  .info-box h2 {
+    margin-top: 0;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-radius: 12px;
+    margin-top: 3rem;
+  }
+
+  .cta-section h2 {
+    color: #fff;
+  }
+
+  .cta-section .button {
+    background: #fff;
+    color: var(--color-primary);
+  }
+</style>

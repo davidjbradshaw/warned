@@ -1,0 +1,154 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Doneren"
+  description="Ondersteun WARNED en help ons onze missie voort te zetten om actieve gepensioneerden in Brussel te dienen"
+  lang="nl"
+  currentPath="give"
+>
+  <div class="page-header">
+    <div class="container">
+      <h1>DONEREN</h1>
+      <p>Doe een gift</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="intro-text">
+      <h2>Waarom doneren?</h2>
+      <p>
+        In de huidige situatie zijn we voornamelijk afhankelijk van financiële donaties om onze deuren open te houden en onze evenementen en activiteiten te organiseren. Naarmate de GOLDIES-gemeenschap groeit, hebben onze originele initiatieven meer financieringsbronnen nodig, net als het onderhoud van onze ruimte in Ukkel en onze werkingskosten. Uw donatie van enkele euro's helpt ons om onze missie voort te zetten en uit te breiden: GOLDIES inspireren, levens verbeteren en een samenleving bevorderen waarin alle generaties beter worden geïntegreerd. Elke actie, hoe klein ook, kan een groot verschil maken.
+      </p>
+      <p class="highlight"><strong>Help ons om te doen wat we doen. Wij danken u voor uw steun!</strong></p>
+    </div>
+
+    <h2>Waarvoor worden uw donaties gebruikt</h2>
+
+    <div class="donation-impacts">
+      <div class="impact-card">
+        <h3>Inclusiviteit</h3>
+        <p>Onze Thé Dansant-evenementen zijn ontworpen om toegankelijk te zijn: door een bescheiden prijs te hanteren, die lager is dan de werkelijke waarde van de ervaring, kiezen we voor inclusiviteit. Dankzij uw donaties kunnen we de artiesten, muzikanten en vrijwilligers die deze feestelijke momenten mogelijk maken, een eerlijke vergoeding geven en tegelijkertijd de GOLDIES een complete ervaring bieden.</p>
+      </div>
+
+      <div class="impact-card">
+        <h3>Toegankelijkheid</h3>
+        <p>Naast de evenementen dragen uw donaties bij aan de werking van WARNED en maken ze al onze acties mogelijk. In solidariteit ondersteunen ze onze missie om GOLDIES sociaal, emotioneel en professioneel te activeren, en stellen ze ons in staat om inclusieve, innovatieve en voor iedereen toegankelijke activiteiten te blijven organiseren.</p>
+      </div>
+
+      <div class="impact-card">
+        <h3>Overdracht</h3>
+        <p>Achter elke workshop van Thé au Jardin staan vrouwen en mannen die hun kennis, energie en toewijding delen. Dankzij uw donaties kunnen we de tijd, toewijding en expertise van de sprekers waarderen, die de GOLDIES een moment van ontspanning bieden om te ontdekken, te leren, te experimenteren, te lachen en ervaringen uit te wisselen.</p>
+      </div>
+    </div>
+
+    <div class="pwyw-section">
+      <h2>Waarom een vrije prijs</h2>
+      <p>
+        In Le Jardin werken de meeste van onze activiteiten met vrije prijzen. Deze keuze is niet toevallig: voor ons is dit de eerlijkste en meest respectvolle manier om inclusie te bevorderen.
+      </p>
+      <p>
+        De vrije prijs stelt iedereen in staat om bij te dragen naar eigen vermogen en naar de waarde die hij hecht aan wat hij ontvangt. Het is gebaseerd op vertrouwen, autonomie, verantwoordelijkheid en solidariteit – waarden die centraal staan bij Le Jardin en WARNED.
+      </p>
+      <p>
+        We hechten bijzonder veel waarde aan dit model omdat het de autonomie respecteert van de Goldies, die als geen ander weten wat dingen waard zijn en wat ze zich kunnen veroorloven. Hier hoeft niemand zich te verantwoorden, om een sociaal tarief te vragen of zijn situatie uit te leggen: iedereen draagt op zijn eigen manier bij, in alle waardigheid.
+      </p>
+      <p>
+        Wanneer degenen die dat kunnen bijdragen voor degenen die dat minder kunnen, blijft de toegang tot onze activiteiten voor iedereen open. Het is een mooi bewijs dat solidariteit werkt – en dat we samen echt een verschil maken.
+      </p>
+      <p class="pwyw-highlight">
+        Bij elk bezoek aan de tuin wordt u uitgenodigd om een vrijwillige bijdrage te leveren aan het donatiepotje — in contanten of via elektronische betaling.
+      </p>
+    </div>
+
+    <div class="support-info">
+      <h3>Hoe te Doneren</h3>
+      <p>Voor informatie over donaties en hoe u onze missie kunt ondersteunen, neem contact met ons op:</p>
+      <p><strong>Email:</strong> <a href="mailto:info@warned.plus">info@warned.plus</a></p>
+      <p><strong>Telefoon:</strong> <a href="tel:+32497755275">(+32) 497 75 52 75</a></p>
+      <p><strong>Adres:</strong> 22 Kauwberg, 1180 Ukkel, België</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .intro-text {
+    margin-bottom: 3rem;
+  }
+
+  .intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+
+  .donation-impacts {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .impact-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-accent);
+  }
+
+  .impact-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .pwyw-section {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+  }
+
+  .pwyw-section h2 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+  }
+
+  .pwyw-section p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  .pwyw-highlight {
+    font-weight: 600;
+    color: #1b5e20;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+  }
+
+  .support-info {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+  }
+
+  .support-info h3 {
+    margin-bottom: 1rem;
+  }
+
+  .support-info p {
+    margin-bottom: 0.5rem;
+  }
+</style>

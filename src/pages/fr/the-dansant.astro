@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Thé Dansant"
+  description="Don't You Dare Call Us Old - Thés dansants glamours avec divertissement live, danse et socialisation pour la communauté GOLDIE 65+"
+  lang="fr"
+  currentPath="the-dansant"
+>
+  <div class="page-header">
+    <div class="container">
+      <h1>Thé Dansant</h1>
+      <p>"Don't You Dare Call Us Old"</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="intro-section">
+      <p class="lead">
+        Boire, manger, danser, chanter, s'amuser : telle est la devise de nos Thé Dansant « Don't You Dare Call Us Old ».
+      </p>
+      <p class="lead">
+        Dans un espace exclusivement réservé et conçu pour notre communauté GOLDIES (65+), les participant.es sont invité.es à vivre le temps d'un après-midi un Tea Time haut en couleurs, glamour et décalé, avec des serveurs élégamment habillés, de l'argenterie étincelante et quelques bulles. Le tout accompagné d'un extravagant cabaret burlesque, de spectacles live, de DJs, d'artistes de cirque, d'un bingo musical et d'un karaoké assourdissant - une véritable immersion dans l'univers du festival américain Burning Man !
+      </p>
+      <p class="goal"><strong>Nos objectifs sont simples:</strong> se retrouver et se connecter, faire plaisir et gambiller, vous perdre dans une danse et vous faire retrouver le sourire.</p>
+    </div>
+
+    <h2>A Quoi vous Attendre</h2>
+    <div class="grid grid-2">
+      <div class="feature-card">
+        <h3>☕ Un véritable Teatime à l'anglaise</h3>
+        <p>Célébrez en style avec les Goldies</p>
+      </div>
+      <div class="feature-card">
+        <h3>🎵 De la Musique</h3>
+        <p>De la musique live et un DJ vous emmènent sur la piste de dance</p>
+      </div>
+      <div class="feature-card">
+        <h3>💃 De la Danse</h3>
+        <p>Les Goldies enflamment la piste !</p>
+      </div>
+      <div class="feature-card">
+        <h3>🎭 Du Divertissement</h3>
+        <p>Laissez nos artistes du cabaret burlesque et du cirque enchanter vos sens. Participez à notre karaoké !</p>
+      </div>
+      <div class="feature-card">
+        <h3>❤️ Des Hôtes Attentionnés</h3>
+        <p>Notre équipe de bénévoles - à l'accueil, au service et à l'animation - est uniquement centrée sur vos besoins.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🤝 De l'Amitié</h3>
+        <p>Rencontrez de nouvelles personnes ou renouez avec vos ami.es lors de cet événement joyeux et extravagant. Liez-vous avec d'anciennes ou de nouvelles amitiés.</p>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h2>Détails de l'événement</h2>
+      <p><strong>Entrée:</strong> Gratuite ou prix libre</p>
+      <p><strong>Réservation:</strong> Arriver à l'heure car le nombre de places assises est limité</p>
+      <p><strong>Rafraîchissements:</strong> Thé anglais de l'après-midi, bulles, cabaret, spectacle, DJ et danse</p>
+      <p>Pour les dates et lieux à venir, consultez notre calendrier ou notre page Facebook.</p>
+    </div>
+
+    <h2>Les Bénéfices d'un Thé Dansant</h2>
+    <div class="grid grid-2">
+      <div class="benefit-card">
+        <h3>Relations Interpersonnelles</h3>
+        <p>Rencontrez de nouvelles personnes et faites-vous de nouveaux ami.es tout en savourant le thé et l'après-midi.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Spontanéité et Curiosité</h3>
+        <p>Ouvrez votre esprit à de toutes nouvelles expériences, et à la rencontre avec les autres participant.es.</p>
+      </div>
+    </div>
+
+    <h2>Qui est bienvenu</h2>
+    <p>
+      GOLDIES ! Que vous soyez célibataire, marié.e, divorcé.e, veuf.ve, ou en couple libre, et quels que soient votre sexe, votre orientation sexuelle, religieuse ou politique, ou encore votre niveau de vie, nous accueillons tous les plus de 65 ans avec enthousiasme !
+    </p>
+    <p>
+      WARNED accueille les GOLDIES de tous bords… ceux qui aiment rire aux éclats, chanter comme des divas d'opéra, danser comme si personne ne regardait, s'habiller de manière non conventionnelle, et ceux qui préfèrent simplement une conversation tranquille autour d'une tasse de thé.
+    </p>
+    <p>
+      Nous accueillons particulièrement les GOLDIES qui vivent l'isolement social dans leur vie quotidienne ou des difficultés financières. Le Thé Dansant est un événement accessible, abordable et subventionné dont tous peuvent profiter.
+    </p>
+
+    <div class="cta-section">
+      <h2>Rejoignez-nous</h2>
+      <p>Prêt à danser, rire et célébrer avec nous ?</p>
+      <a href="mailto:info@warned.plus" class="button">Contactez-nous</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .goal {
+    font-size: 1.1rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+
+  .feature-card, .benefit-card {
+    padding: 1.5rem;
+    background: #fff;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover, .benefit-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .feature-card h3, .benefit-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+  }
+
+  .info-box {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+    border-left: 4px solid var(--color-accent);
+  }
+
+  .info-box h2 {
+    margin-top: 0;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-radius: 12px;
+    margin-top: 3rem;
+  }
+
+  .cta-section h2 {
+    color: #fff;
+  }
+
+  .cta-section .button {
+    background: #fff;
+    color: var(--color-primary);
+  }
+</style>
