@@ -25,3 +25,5 @@ pnpm-debug.log*
 
 # SquareSpace download (temporary)
 squarespace-download/
+download-images.sh
+download-all-media.sh
