@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Home"
+  description="Wij Zijn Gepensioneerd Niet Verlopen - WARNED is een gemeenschap voor actieve gepensioneerden in Brussel"
+  lang="nl"
+  currentPath=""
+>
+  <div class="page-header">
+    <div class="container">
+      <h1>Wij Zijn Gepensioneerd Niet Verlopen</h1>
+      <p>Word lid van onze levendige gemeenschap van actieve gepensioneerden in Brussel</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="intro-section">
+      <h2>Welkom bij WARNED</h2>
+      <p>
+        WARNED is een gemeenschapsorganisatie die zich toelegt op het verrijken van het leven
+        van gepensioneerden in Brussel door middel van boeiende sociale activiteiten,
+        culturele evenementen en betekenisvolle verbindingen.
+      </p>
+    </div>
+
+    <div class="events-preview">
+      <h2>Aankomende Evenementen</h2>
+      <div class="grid grid-3">
+        <div class="event-card">
+          <h3>Thé Dansant</h3>
+          <p>Ervaar glamoureuze theefeesten met live entertainment, dansen en socializen.</p>
+          <a href="/warned/nl/events/the-dansant" class="button">Meer Info</a>
+        </div>
+
+        <div class="event-card">
+          <h3>Thé au Jardin</h3>
+          <p>Geniet van middag thee in prachtige tuinen met vrienden en gemeenschap.</p>
+          <a href="/warned/nl/events/the-au-jardin" class="button">Meer Info</a>
+        </div>
+
+        <div class="event-card">
+          <h3>Chantage</h3>
+          <p>Sluit je aan bij onze muzikale uitvoeringen en zangbijeenkomsten.</p>
+          <a href="/warned/nl/events/chantage" class="button">Meer Info</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <h2>Doe Mee</h2>
+      <p>Word lid van onze gemeenschap en geniet van alle voordelen van lidmaatschap.</p>
+      <div class="cta-buttons">
+        <a href="/warned/nl/join" class="button">Meedoen</a>
+        <a href="/warned/nl/give" class="button button-secondary">Steun Ons</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .intro-section {
+    margin-bottom: 3rem;
+  }
+
+  .intro-section h2 {
+    margin-bottom: 1rem;
+  }
+
+  .intro-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text-light);
+  }
+
+  .events-preview {
+    margin: 4rem 0;
+  }
+
+  .events-preview h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .event-card {
+    padding: 2rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .event-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .event-card h3 {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+
+  .event-card p {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-light);
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-radius: 12px;
+    margin: 4rem 0;
+  }
+
+  .cta-section h2 {
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-light);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

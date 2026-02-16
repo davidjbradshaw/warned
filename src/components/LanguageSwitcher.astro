@@ -1,0 +1,59 @@
+---
+import { languages } from '../i18n/config';
+import type { Language } from '../i18n/config';
+
+interface Props {
+  currentLang: Language;
+  currentPath?: string;
+}
+
+const { currentLang, currentPath = '' } = Astro.props;
+
+// Helper to generate language-switched URLs
+const getLangUrl = (lang: Language) => {
+  if (lang === 'en') {
+    return currentPath ? `/${currentPath}` : '/';
+  }
+  return currentPath ? `/${lang}/${currentPath}` : `/${lang}`;
+};
+---
+
+<div class="language-switcher">
+  {Object.entries(languages).map(([code, name]) => (
+    <a
+      href={getLangUrl(code as Language)}
+      class:list={['lang-link', { active: code === currentLang }]}
+      aria-label={`Switch to ${name}`}
+    >
+      {code.toUpperCase()}
+    </a>
+  ))}
+</div>
+
+<style>
+  .language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .lang-link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+  }
+
+  .lang-link:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .lang-link.active {
+    background: var(--color-primary);
+    color: #fff;
+    pointer-events: none;
+  }
+</style>
