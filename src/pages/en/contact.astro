@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact | Connect Today - Get Support"
+  description="Get in touch with WARNED for event inquiries, support, and more. Contact us via email or phone for assistance across multiple languages."
+  lang="en"
+  currentPath="contact"
+>
+  <div class="page-header with-hero hero-contact">
+    <div class="container">
+      <h1>Contact us!</h1>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <h3>Email</h3>
+            <p><a href="mailto:info@warned.plus">info@warned.plus</a></p>
+          </div>
+
+          <div class="contact-item">
+            <h3>Phone</h3>
+            <p><a href="tel:+32497755275">(+32) 497 75 52 75</a></p>
+          </div>
+
+          <div class="contact-item">
+            <h3>Address</h3>
+            <p>
+              22 Kauwberg<br>
+              1180 Uccle<br>
+              Bruxelles
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-message">
+          <h2>Get in Touch</h2>
+          <p>
+            We'd love to hear from you! Whether you have questions about our events,
+            want to learn more about membership, or simply want to connect with our
+            community, please don't hesitate to reach out.
+          </p>
+          <p>
+            You can contact us via email or phone, and we'll get back to you as soon
+            as possible. We're here to help and look forward to connecting with you!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .content-section {
+    padding: 4rem 0;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1.5fr;
+      align-items: start;
+    }
+  }
+
+  .contact-info {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  .contact-item {
+    margin-bottom: 2rem;
+  }
+
+  .contact-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .contact-item h3 {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .contact-item p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .contact-item a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .contact-item a:hover {
+    color: var(--color-primary);
+  }
+
+  .contact-message h2 {
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-message p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+  }
+
+  .contact-message p:last-child {
+    margin-bottom: 0;
+  }
+</style>

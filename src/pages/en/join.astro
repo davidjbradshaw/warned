@@ -1,5 +1,20 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ImageGallery from '../../components/ImageGallery.astro';
+
+// Join page - volunteers and team in action
+const volunteerImages = [
+  '/images/squarespace/244379831_823729688293325_6357936052483367602_n.jpg',
+  '/images/squarespace/244390811_823727464960214_5723369371419271371_n.jpg',
+  '/images/squarespace/244625533_823729691626658_8770589097166957863_n.jpg',
+  '/images/squarespace/116873449_935542003629785_7296864894493598189_n__1_.jpg',
+  '/images/squarespace/78713136_667873663743331_9049748542259724288_n__1_.jpg',
+  '/images/squarespace/20211001_123738.jpg',
+  '/images/squarespace/20211001_155822.jpg',
+  '/images/squarespace/817A3806.jpg',
+  '/images/squarespace/817A3876.jpg',
+  '/images/squarespace/817A3976.jpg',
+];
 ---
 
 <BaseLayout
@@ -8,7 +23,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   lang="en"
   currentPath="join"
 >
-  <div class="page-header">
+  <div class="page-header with-hero hero-join">
     <div class="container">
       <h1>JOIN</h1>
       <p>Join, Engage, Transform Now</p>
@@ -33,6 +48,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         Whether it's donating your precious time or your unique skills, we can learn from you and grow this cultural and social project together.
       </p>
     </div>
+
+    <h2>Our Volunteers in Action</h2>
+    <p>See our amazing team of volunteers making a difference in the WARNED community!</p>
+
+    <ImageGallery images={volunteerImages} alt="WARNED volunteers photo" columns={3} />
 
     <h2>How To Get Involved</h2>
 

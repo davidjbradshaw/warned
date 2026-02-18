@@ -1,5 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ImageGallery from '../../components/ImageGallery.astro';
+
+// Chantage gallery images - choir, singing, community activities
+const chantageImages = [
+  '/images/squarespace/chairdance_4.jpg',
+  '/images/squarespace/chairdance_5.jpg',
+  '/images/squarespace/_DSC8922.jpg',
+  '/images/squarespace/_DSC8953.jpg',
+  '/images/squarespace/_DSC8974.jpg',
+  '/images/squarespace/_DSC9416.jpg',
+  '/images/squarespace/_DSC9424__1_.jpg',
+  '/images/squarespace/_DSC9431.jpg',
+  '/images/squarespace/_DSC9434.jpg',
+  '/images/squarespace/_DSC9465.jpg',
+  '/images/squarespace/_DSC9475__1_.jpg',
+  '/images/squarespace/_DSC9529.jpg',
+];
 ---
 
 <BaseLayout
@@ -8,7 +25,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   lang="nl"
   currentPath="chantage"
 >
-  <div class="page-header">
+  <div class="page-header with-hero hero-chantage">
     <div class="container">
       <h1>Chantâge</h1>
       <p>Het Leven Zingen, Zonder Grenzen</p>
@@ -96,6 +113,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <strong>Twee keer per jaar kiezen de Goldies samen</strong> welke nummers onze harten en stemmen zullen laten trillen.
       </p>
     </div>
+
+    <h2>Koor Galerij</h2>
+    <p>Bekijk ons Chantâge koor in actie - zingen, verbinden en samen vreugde delen!</p>
+
+    <ImageGallery images={chantageImages} alt="Chantâge koor foto" columns={3} />
 
     <div class="join-section">
       <h2>Sluit Je Aan</h2>

@@ -10,11 +10,15 @@ interface Props {
 const { currentLang, currentPath = '' } = Astro.props;
 
 // Helper to generate language-switched URLs
+// All languages have /{lang} prefix (prefixDefaultLocale: true)
 const getLangUrl = (lang: Language) => {
-  if (lang === 'en') {
-    return currentPath ? `/${currentPath}` : '/';
+  // If no currentPath, return home page
+  if (!currentPath) {
+    return `/${lang}`;
   }
-  return currentPath ? `/${lang}/${currentPath}` : `/${lang}`;
+
+  // All languages have language prefix
+  return `/${lang}/${currentPath}`;
 };
 ---
 

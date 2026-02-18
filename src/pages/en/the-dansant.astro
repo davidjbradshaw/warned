@@ -1,5 +1,40 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ImageGallery from '../../components/ImageGallery.astro';
+
+// Thé Dansant gallery images
+const dansantImages = [
+  '/images/squarespace/TheDansant_Atomium_1.jpg',
+  '/images/squarespace/TheDansant_Atomium_7.jpg',
+  '/images/squarespace/TheDansant_Atomium_9.jpg',
+  '/images/squarespace/TheDansant_Atomium_14.jpg',
+  '/images/squarespace/TheDansant_Atomium_20.jpg',
+  '/images/squarespace/TheDansant_Atomium_36.jpg',
+  '/images/squarespace/TheDansant_Atomium_42.jpg',
+  '/images/squarespace/TheDansant_Atomium_50.jpg',
+  '/images/squarespace/TheDansant_Atomium_67.jpg',
+  '/images/squarespace/TheDansant_Atomium_69.jpg',
+  '/images/squarespace/TheDansant_Atomium_71.jpg',
+  '/images/squarespace/TheDansant_Atomium_78.jpg',
+  '/images/squarespace/TheDansant_Atomium_79.jpg',
+  '/images/squarespace/TheDansant_Atomium_84.jpg',
+  '/images/squarespace/TheDansant_Atomium_86.jpg',
+  '/images/squarespace/TheDansant_Atomium_92.jpg',
+  '/images/squarespace/TheDansant_Atomium_97.jpg',
+  '/images/squarespace/TheDansant_Atomium_100.jpg',
+  '/images/squarespace/TheDansant_Atomium_101.jpg',
+  '/images/squarespace/TheDansant_Atomium_102.jpg',
+  '/images/squarespace/TheDansant-3.jpg',
+  '/images/squarespace/TheDansant-47.jpg',
+  '/images/squarespace/TheDansant-58.jpg',
+  '/images/squarespace/TheDansant-63.jpg',
+  '/images/squarespace/TheDansant-110.jpg',
+  '/images/squarespace/TheDansant-111.jpg',
+  '/images/squarespace/TheDansant-128.jpg',
+  '/images/squarespace/TheDansantJuin-4.jpg',
+  '/images/squarespace/TheDansantJuin-12.jpg',
+  '/images/squarespace/chairdance_4.jpg',
+];
 ---
 
 <BaseLayout
@@ -8,7 +43,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   lang="en"
   currentPath="the-dansant"
 >
-  <div class="page-header">
+  <div class="page-header with-hero hero-the-dansant">
     <div class="container">
       <h1>Thé Dansant</h1>
       <p>"Don't You Dare Call Us Old"</p>
@@ -57,6 +92,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <p><strong>Reservation:</strong> Required</p>
       <p>For upcoming dates and locations, please check our calendar or Facebook page.</p>
     </div>
+
+    <h2>Event Gallery</h2>
+    <p>See photos from our previous Thé Dansant events - the dancing, entertainment, fun, and community spirit!</p>
+
+    <ImageGallery images={dansantImages} alt="Thé Dansant event photo" columns={3} />
 
     <h2>Who's Welcome</h2>
     <p>

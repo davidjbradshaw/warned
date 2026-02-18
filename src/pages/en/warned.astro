@@ -1,0 +1,418 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ImageGallery from '../../components/ImageGallery.astro';
+
+// Get base URL for assets
+const base = import.meta.env.BASE_URL;
+
+// WARNED community gallery images
+const communityImages = [
+  `${base}images/squarespace/116873449_935542003629785_7296864894493598189_n__1_.jpg`,
+  `${base}images/squarespace/148864926_695875434412085_2656654398241171247_n.jpg`,
+  `${base}images/squarespace/163889760_717267048939590_7184625663090818825_n.jpg`,
+  `${base}images/squarespace/190452515_748861962446765_6427275459551632264_n.jpg`,
+  `${base}images/squarespace/244379831_823729688293325_6357936052483367602_n.jpg`,
+  `${base}images/squarespace/244390811_823727464960214_5723369371419271371_n.jpg`,
+  `${base}images/squarespace/244625533_823729691626658_8770589097166957863_n.jpg`,
+  `${base}images/squarespace/245431878_828092181190409_2322328500546551357_n.jpg`,
+  `${base}images/squarespace/272074521_883502835649343_3860363117654774734_n.jpg`,
+  `${base}images/squarespace/78713136_667873663743331_9049748542259724288_n__1_.jpg`,
+  `${base}images/squarespace/20230712_185715.jpg`,
+  `${base}images/squarespace/20230809_174439.jpg`,
+  `${base}images/squarespace/_DSC9588__1_.jpg`,
+  `${base}images/squarespace/_DSC9659.jpg`,
+  `${base}images/squarespace/_DSC9681.jpg`,
+];
+---
+
+<BaseLayout
+  title="WARNED"
+  description="We Are Retired Not Expired - Learn about WARNED's mission to revolutionize the world of seniors"
+  lang="en"
+  currentPath="warned"
+>
+  <div class="page-header with-hero hero-warned">
+    <div class="container">
+      <h1>We Are Retired Not ExpireD!</h1>
+    </div>
+  </div>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="why-warned">
+        <h2>Why WARNED</h2>
+
+        <p>
+          The city accentuates the feeling of isolation: meeting places are disappearing, neighborhood relations are weakening and ageism is insidiously taking hold in the organization of society. Older people are particularly vulnerable to loneliness and social isolation - especially in cities - and this can have serious consequences for their health. Studies suggest that loneliness could increase the risk of premature death by a quarter or more and be as harmful as smoking 15 cigarettes a day. It is the responsibility of all of us to encourage intergenerational connection and to lift the elderly out of loneliness.
+        </p>
+
+        <p>
+          A new phenomenon is here: more time is available to today's generation of seniors. Life has lengthened to such an extent that we face twenty, thirty, even forty years of life beyond retirement. What to do with this gift? What projects can we envisage that prove suitable, fruitful, realistic and inventive? How can a positive "aging culture" emerge that both provides seniors with better living conditions and also gives meaning to what they experience? We have to be intelligent and creative in order to tackle "sustainable aging" head-on. This is where WARNED comes in.
+        </p>
+
+        <p>
+          <strong>WARNED - We Are Retired Not ExpireD</strong> - is a non-profit which dedicates itself to the creation of unique initiatives, events and activities that activate the senior community. We aim to revolutionize the world of seniors by actively fighting ageism and highlighting the positive role played by retirees within society. We help seniors - <strong>GOLDIES</strong> - to pursue more active and fulfilling social lives, and have fun! We promote intergenerational relationships and social cohesion. We add value through the sharing and transfer of professional skills. We encourage seniors to celebrate their age with confidence and pride.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="container">
+      <h2>Our Community</h2>
+      <p class="section-intro">See our WARNED community in action - connecting, celebrating, and living life to the fullest!</p>
+
+      <ImageGallery images={communityImages} alt="WARNED community photo" columns={3} />
+    </div>
+  </section>
+
+  <section class="pillars-section">
+    <div class="container">
+      <h2>Our Pillars</h2>
+      <p class="section-intro">These three philosophical pillars form the bedrock of all WARNED's initiatives</p>
+
+      <div class="grid grid-3">
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <img src={`${base}images/social-01.jpg`} alt="Social Connection" />
+          </div>
+          <h3>Social Connection</h3>
+          <p>
+            Our <strong>Thé Dansant</strong> and <strong>Jardin</strong> activities emphasize social connection between GOLDIES and their community via friendship and personal relationships. By providing a supportive, safe and fun environment, we encourage intergenerational mixing, peer-to-peer relationships and active participation.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <img src={`${base}images/physical.jpg`} alt="Emotional Wellbeing" />
+          </div>
+          <h3>Emotional Wellbeing</h3>
+          <p>
+            At the heart of our <strong>Third Date</strong> initiative is the belief that all GOLDIES should have the space to develop self confidence, to boost self esteem, and to improve mood which all carry forward into their daily lives. We make it a priority to offer emotional support to grow.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <img src={`${base}images/professional-01.jpg`} alt="Professional Power" />
+          </div>
+          <h3>Professional Power</h3>
+          <p>
+            Our <strong>Third Act</strong> initiatives celebrate the deep professional experience that all our GOLDIES have to offer, no matter their field of expertise. We recognize the enduring vitality of a senior workforce by creating projects that aid professional connection and knowledge sharing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values-section">
+    <div class="container">
+      <h2>Our Values</h2>
+      <p class="section-intro">These three pillars - and their associated initiatives - forge and encourage the creation of the following values within our body of staff, volunteers, artists, and community of GOLDIES.</p>
+
+      <div class="grid grid-3">
+        <div class="value-card">
+          <h3>Inclusivity</h3>
+          <p>We are open-minded and respectful of difference. Everyone is welcome equally, regardless of their gender, sexuality, race, religion, politics, marital status or profession.</p>
+        </div>
+
+        <div class="value-card">
+          <h3>Participation</h3>
+          <p>Self expression and participation is key. There are no spectators! Everyone is encouraged to participate fully in all activities and freely express their individuality.</p>
+        </div>
+
+        <div class="value-card">
+          <h3>Autonomy</h3>
+          <p>We want everyone to feel autonomous - especially physically, socially and emotionally. We encourage all our participants to feel free to move and express themselves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits-section">
+    <div class="container">
+      <h2>Our Benefits</h2>
+      <p class="section-intro">Our pillars and values bring long-lasting benefits to our GOLDIE community. These benefits aim to positively transform their everyday lives.</p>
+
+      <div class="grid grid-3">
+        <div class="benefit-card">
+          <h3>Personal Relationships</h3>
+          <p>Finding and developing meaningful companionships, love, joy and friendship.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Spontaneity and Curiosity</h3>
+          <p>Seizing the day and having active curiosity in every new experience.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Intellectual Engagement</h3>
+          <p>Facing activities which challenge us to think, reflect and react with courage and confidence.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Intimacy</h3>
+          <p>Finding emotional intimacy between partners/friends and the (re-)awakening of one's sensual, sexual and spiritual selves.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Generosity</h3>
+          <p>Making time for each other and sharing one's skills, expertise, empathy and time freely with those around us.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Co-Creation</h3>
+          <p>Collaborating together in order to allow a sense of pride and civic responsibility in our community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="goldies-section">
+    <div class="container">
+      <h2>GOLDIES</h2>
+
+      <div class="goldies-content">
+        <div class="goldies-text">
+          <p>
+            <strong>GOLDIES</strong> - the community of seniors 65+ - are the beating heart of WARNED. Regardless of marital status, gender, sexuality, race, politics, religion, economic background or profession, all GOLDIES are welcome to participate in the unique events, activities and initiatives that WARNED creates.
+          </p>
+
+          <p>
+            At WARNED, we aim to release the <strong>FLAMINGOLD</strong> in all our GOLDIES. Perfectly embodying the spirit of the GOLDIE, the pink flamingo represents the mastery of emotions, cooperation, openness and love, while being charming, graceful and serene. It traditionally symbolizes one's social nature and the desire to create community bonds in which we can all trust.
+          </p>
+
+          <p>
+            Most importantly, the flamingo represents the late blossoming of beauty and confidence. Born grey and pale, it takes on its distinctive colour with age - just as our GOLDIES are encouraged to flourish with pride during their senior years.
+          </p>
+        </div>
+
+        <div class="goldies-images">
+          <img src={`${base}images/GOLDIE_1.jpeg`} alt="WARNED GOLDIES community members" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section">
+    <div class="container">
+      <h2>What Our GOLDIES Say</h2>
+
+      <div class="grid grid-2">
+        <div class="testimonial-card">
+          <blockquote>
+            <p>"Go ahead, your morale will be at its zenith"</p>
+            <cite>Laurence</cite>
+          </blockquote>
+        </div>
+
+        <div class="testimonial-card">
+          <blockquote>
+            <p>"It really is a cure for loneliness"</p>
+            <cite>Christine</cite>
+          </blockquote>
+        </div>
+
+        <div class="testimonial-card">
+          <blockquote>
+            <p>"Should be sponsored by social security"</p>
+            <cite>Lorette</cite>
+          </blockquote>
+        </div>
+
+        <div class="testimonial-card">
+          <blockquote>
+            <p>"It's fun, relaxed, unfussy and without any difference in social class: it's the Joie de Vivre"</p>
+            <cite>Christian</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Join the WARNED Community</h2>
+      <p>Become a member and help us continue our mission of activating social, personal and professional development in our GOLDIE community.</p>
+      <div class="cta-buttons">
+        <a href="/en/join" class="button">Become a Member</a>
+        <a href="/en/give" class="button button-secondary">Support WARNED</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    padding: 4rem 0;
+  }
+
+  section:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    font-size: 2.5rem;
+  }
+
+  .section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .why-warned p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-light);
+  }
+
+  .pillar-card,
+  .value-card,
+  .benefit-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .pillar-card:hover,
+  .value-card:hover,
+  .benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .pillar-icon {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .pillar-icon img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .pillar-card h3,
+  .value-card h3,
+  .benefit-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .pillar-card p,
+  .value-card p,
+  .benefit-card p {
+    color: var(--color-text-light);
+    line-height: 1.6;
+  }
+
+  .goldies-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .goldies-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-light);
+  }
+
+  .goldies-images img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .testimonials-section {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  }
+
+  .testimonial-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .testimonial-card blockquote {
+    margin: 0;
+  }
+
+  .testimonial-card p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .testimonial-card cite {
+    display: block;
+    text-align: right;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #c41e3a 100%);
+    color: white;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .button-secondary {
+    background: white;
+    color: var(--color-primary);
+  }
+
+  .button-secondary:hover {
+    background: #f5f5f5;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+
+    .goldies-content {
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+</style>

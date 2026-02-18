@@ -1,0 +1,274 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+---
+
+<BaseLayout
+  title="Donation"
+  description="Soutenez WARNED avec votre don et aidez-nous à poursuivre notre mission d'activation de la communauté des GOLDIES"
+  lang="fr"
+  currentPath="don"
+>
+  <div class="page-header with-hero hero-donate">
+    <div class="container">
+      <h1>Donation</h1>
+      <p>Soutenez notre mission</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="intro-text">
+      <p>
+        Que vous décidiez de nous soutenir avec un don mensuel récurrent de votre choix, entre une tasse de thé et un déjeuner en ville, ou choisissiez de nous encourager en faisant un don unique, c'est aussi simple que 1-2-3.
+      </p>
+      <p>
+        Vos dons à WARNED sont <strong>déductibles fiscalement à partir de 40 euros</strong> (attention à ne pas dépasser le plafond absolu de 392.200 euros...).
+      </p>
+      <p>
+        Quelle que soit la taille de votre budget cadeau, vos dons doivent être versés avant le 31 décembre sur notre compte bancaire.
+      </p>
+    </div>
+
+    <div class="info-boxes">
+      <div class="info-box">
+        <h3>Attestation Fiscale</h3>
+        <p>
+          Une attestation fiscale sera délivrée dans le courant du premier trimestre suivant et vous donnera le droit de prétendre à la déduction lors de votre calcul d'impôt de l'année suivante à votre versement.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <h3>Faire un don par virement</h3>
+        <p>
+          Si vous faites un don par virement, inscrivez dans le champ « Communication (libre) » votre prénom (en entier) suivi de votre nom de famille, et le mot « don ». Ainsi, votre don pourra être ajouté automatiquement.
+        </p>
+      </div>
+    </div>
+
+    <h2 class="section-title">A votre bon coeur ..</h2>
+
+    <div class="payment-methods">
+      <div class="payment-method">
+        <h3>PAR VIREMENT BANCAIRE</h3>
+        <p class="bank-details">
+          <strong>WARNED aisbl - BE58 0689 4241 8479</strong><br>
+          Communication : Nom complet + contact + "Don"
+        </p>
+      </div>
+
+      <div class="payment-method">
+        <h3>PAR CODE QR</h3>
+        <p>Montant libre</p>
+      </div>
+    </div>
+
+    <div class="impact-section">
+      <p class="text-center">Votre générosité contribue à financer nos activités et notre mission d'activation sociale, émotionnelle et professionnelle de la communauté des GOLDIES.</p>
+    </div>
+
+    <div class="donation-tiers">
+      <div class="tier-card">
+        <h3>PARRAINAGE GOLDIE</h3>
+        <div class="amount">€25</div>
+        <p>Avec un simple don de 25 euros, vous pouvez parrainer l'entrée d'un.e GOLDIE à l'un de nos événements.</p>
+        <img src={`${base}images/QR_25_DON.png`} alt="Code QR pour un don de 25€" class="qr-code">
+      </div>
+
+      <div class="tier-card">
+        <h3>ADHESION à WARNED</h3>
+        <div class="amount">€50</div>
+        <p>Devenez membre bienfaiteur.e de l'association WARNED avec un don de 50 euros.</p>
+        <img src={`${base}images/QR_50_DON.png`} alt="Code QR pour un don de 50€" class="qr-code">
+      </div>
+
+      <div class="tier-card">
+        <h3>ALLUMAGE FLAMINGOLD</h3>
+        <div class="amount">€75</div>
+        <p>Un simple don de 75 euros permet de financer un atelier interactif d'une heure au Thé au Jardin.</p>
+        <img src={`${base}images/QR_75_DON.png`} alt="Code QR pour un don de 75€" class="qr-code">
+      </div>
+    </div>
+
+    <div class="qr-instructions">
+      <h2>Comment payer avec un code QR</h2>
+
+      <div class="steps">
+        <div class="step">
+          <h3>1. SCANNER</h3>
+          <p>Scannez le code QR avec votre bancaire ou Payconiq.*</p>
+          <p class="note">*Seulement disponible en Belgique.</p>
+        </div>
+
+        <div class="step">
+          <h3>2. VERIFIER</h3>
+          <p>Verifiez le montant que vous souhaitez donner. Ajoutez vos coordonnées complètes en communication (nom/prénom/adresse + "DON")</p>
+        </div>
+
+        <div class="step">
+          <h3>3. CONFIRMER</h3>
+          <p>Appuyez sur le bouton de paiement et confirmez avec votre PIN, votre empreinte digitale ou par reconnaissance faciale. Vous recevez immédiatement une confirmation du paiement</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="thank-you">
+      <h2>Votre soutien est inestimable. Merci!</h2>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .intro-text {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .intro-text p {
+    margin-bottom: 1rem;
+  }
+
+  .info-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .info-box {
+    padding: 2rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+  }
+
+  .info-box h3 {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+
+  .section-title {
+    text-align: center;
+    margin: 3rem 0 2rem;
+  }
+
+  .payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .payment-method {
+    padding: 2rem;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .payment-method h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .bank-details {
+    font-size: 1.1rem;
+  }
+
+  .impact-section {
+    text-align: center;
+    margin: 4rem 0;
+    padding: 3rem 2rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+  }
+
+  .text-center {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 1rem;
+  }
+
+  .donation-tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .tier-card {
+    padding: 2rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .tier-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin: 1rem 0;
+  }
+
+  .qr-code {
+    max-width: 200px;
+    margin: 1.5rem auto 0;
+    display: block;
+  }
+
+  .qr-instructions {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+  }
+
+  .qr-instructions h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .step h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .step .note {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  .thank-you {
+    text-align: center;
+    margin: 4rem 0 2rem;
+    padding: 3rem 2rem;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 8px;
+  }
+
+  .thank-you h2 {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .amount {
+      font-size: 2rem;
+    }
+  }
+</style>

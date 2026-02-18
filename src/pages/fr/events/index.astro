@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Événements et Activités"
+  description="Découvrez tous les événements et activités passionnants que WARNED a à offrir"
+  lang="fr"
+  currentPath="events"
+>
+  <div class="page-header with-hero hero-events">
+    <div class="container">
+      <h1>Événements et Activités</h1>
+      <p>Rejoignez-nous pour nos programmes communautaires dynamiques</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="intro-section">
+      <h2>Nos Programmes</h2>
+      <p>
+        WARNED propose une variété d'événements et d'activités conçus pour rassembler les GOLDIES,
+        célébrer la vie et créer des liens significatifs. Des thés dansants glamour aux performances
+        chorales et aux rassemblements dans les jardins, il y en a pour tous les goûts.
+      </p>
+    </div>
+
+    <div class="events-grid">
+      <div class="grid grid-3">
+        <div class="event-card">
+          <h3>Thé Dansant</h3>
+          <p>"N'osez pas nous appeler vieux" - Vivez des thés glamour avec des divertissements en direct, du cabaret burlesque, de la danse et des rencontres.</p>
+          <a href="/fr/the-dansant" class="button">En Savoir Plus</a>
+        </div>
+
+        <div class="event-card">
+          <h3>Thé au Jardin</h3>
+          <p>Un havre de verdure au cœur de la ville. Rejoignez-nous pour des ateliers, des cours de mouvement, du tai-chi et des activités communautaires.</p>
+          <a href="/fr/the-au-jardin" class="button">En Savoir Plus</a>
+        </div>
+
+        <div class="event-card">
+          <h3>Chantâge</h3>
+          <p>Notre chorale pop - festive, ludique et un peu décalée. Aucune audition requise, juste de l'enthousiasme!</p>
+          <a href="/fr/chantage" class="button">En Savoir Plus</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="calendar-section">
+      <h2>Calendrier des Événements</h2>
+      <p>Consultez notre calendrier complet des événements et activités à venir.</p>
+      <a href="/fr/events/calendar" class="button">Voir le Calendrier</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .intro-section {
+    margin-bottom: 3rem;
+  }
+
+  .events-grid {
+    margin: 3rem 0;
+  }
+
+  .event-card {
+    padding: 2rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .event-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .event-card h3 {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+  }
+
+  .event-card p {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-light);
+  }
+
+  .calendar-section {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-radius: 12px;
+    margin: 4rem 0;
+  }
+
+  .calendar-section h2 {
+    margin-bottom: 1rem;
+  }
+
+  .calendar-section p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+  }
+</style>

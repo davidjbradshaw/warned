@@ -1,5 +1,28 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ImageGallery from '../../components/ImageGallery.astro';
+
+// Thé au Jardin gallery images
+const jardinImages = [
+  '/images/squarespace/FB_post_activite_s_-_The__au_Jardin__1_.jpg',
+  '/images/squarespace/FB_post_activite_s_-_The__au_Jardin__2_.jpg',
+  '/images/squarespace/TheauJardinDansant-7.jpg',
+  '/images/squarespace/TheauJardinDansant-14.jpg',
+  '/images/squarespace/Anniversaires_ga_teaux.jpeg',
+  '/images/squarespace/chairdance_5.jpg',
+  '/images/squarespace/20200717_122846.jpg',
+  '/images/squarespace/20200717_123254__1_.jpg',
+  '/images/squarespace/20200717_152831.jpg',
+  '/images/squarespace/20200801_182913.jpg',
+  '/images/squarespace/20200903_161416.jpg',
+  '/images/squarespace/20210414_145638.jpg',
+  '/images/squarespace/20210421_154157.jpg',
+  '/images/squarespace/20210421_154213.jpg',
+  '/images/squarespace/20210630_141851.jpg',
+  '/images/squarespace/20211001_123738.jpg',
+  '/images/squarespace/20211001_155822.jpg',
+  '/images/squarespace/20220408_160023.jpg',
+];
 ---
 
 <BaseLayout
@@ -8,7 +31,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   lang="fr"
   currentPath="the-au-jardin"
 >
-  <div class="page-header">
+  <div class="page-header with-hero hero-the-au-jardin">
     <div class="container">
       <h1>Thé au Jardin</h1>
       <p>Votre Jardin. Votre Communauté. Votre Sanctuaire.</p>
@@ -122,6 +145,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </div>
       </div>
     </div>
+
+    <h2>Galerie du Jardin</h2>
+    <p>Découvrez la beauté de notre sanctuaire de jardin et les activités que nous partageons ensemble.</p>
+
+    <ImageGallery images={jardinImages} alt="Photo d'activité Thé au Jardin" columns={3} />
 
     <div class="location-section">
       <h2>Visitez-nous</h2>

@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Event & Activity Calendar"
+  description="View all upcoming WARNED events and activities"
+  lang="en"
+  currentPath="events/calendar"
+>
+  <div class="page-header with-hero hero-events">
+    <div class="container">
+      <h1>Event & Activity Calendar</h1>
+      <p>Stay up to date with all our upcoming events</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="calendar-intro">
+      <p>
+        Join us for our exciting lineup of events and activities. From our signature
+        Thé Dansant parties to choir rehearsals and garden workshops, there's always
+        something happening at WARNED!
+      </p>
+    </div>
+
+    <div class="calendar-container">
+      <div class="calendar-placeholder">
+        <h2>Coming Soon</h2>
+        <p>Our interactive calendar is being updated. Please check back soon or contact us at info@warned.plus for the latest schedule.</p>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <h2>Stay Informed</h2>
+      <p>For the most current information about our events, please contact us:</p>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:info@warned.plus">info@warned.plus</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+32497755275">(+32) 497 75 52 75</a></p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .calendar-intro {
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text-light);
+  }
+
+  .calendar-container {
+    margin: 3rem 0;
+    min-height: 400px;
+  }
+
+  .calendar-placeholder {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    border-radius: 12px;
+  }
+
+  .calendar-placeholder h2 {
+    margin-bottom: 1rem;
+  }
+
+  .calendar-placeholder p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+  }
+
+  .contact-section {
+    text-align: center;
+    padding: 3rem;
+    margin-top: 4rem;
+  }
+
+  .contact-section h2 {
+    margin-bottom: 1rem;
+  }
+
+  .contact-info {
+    margin-top: 2rem;
+  }
+
+  .contact-info p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+
+  .contact-info a {
+    color: var(--color-primary);
+    font-weight: 500;
+  }
+</style>

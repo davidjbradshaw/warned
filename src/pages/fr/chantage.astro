@@ -1,5 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ImageGallery from '../../components/ImageGallery.astro';
+
+// Chantage gallery images - choir, singing, community activities
+const chantageImages = [
+  '/images/squarespace/chairdance_4.jpg',
+  '/images/squarespace/chairdance_5.jpg',
+  '/images/squarespace/_DSC8922.jpg',
+  '/images/squarespace/_DSC8953.jpg',
+  '/images/squarespace/_DSC8974.jpg',
+  '/images/squarespace/_DSC9416.jpg',
+  '/images/squarespace/_DSC9424__1_.jpg',
+  '/images/squarespace/_DSC9431.jpg',
+  '/images/squarespace/_DSC9434.jpg',
+  '/images/squarespace/_DSC9465.jpg',
+  '/images/squarespace/_DSC9475__1_.jpg',
+  '/images/squarespace/_DSC9529.jpg',
+];
 ---
 
 <BaseLayout
@@ -8,7 +25,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   lang="fr"
   currentPath="chantage"
 >
-  <div class="page-header">
+  <div class="page-header with-hero hero-chantage">
     <div class="container">
       <h1>Chantâge</h1>
       <p>Chanter la Vie, Sans Frontières ni Étiquettes</p>
@@ -96,6 +113,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         Deux fois par an, les Goldies mettent leurs idées sur la table pour décider ensemble des morceaux qui feront battre nos cœurs.
       </p>
     </div>
+
+    <h2>Galerie de la Chorale</h2>
+    <p>Découvrez notre chorale Chantâge en action - chanter, se connecter et partager la joie ensemble!</p>
+
+    <ImageGallery images={chantageImages} alt="Photo de la chorale Chantâge" columns={3} />
 
     <div class="join-section">
       <h2>Nous rejoindre</h2>

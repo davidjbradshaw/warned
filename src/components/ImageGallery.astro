@@ -1,0 +1,274 @@
+---
+interface Props {
+  images: string[];
+  alt?: string;
+  columns?: number;
+}
+
+const { images, alt = "Gallery image", columns = 3 } = Astro.props;
+---
+
+<div class="image-gallery" data-columns={columns}>
+  {images.map((image, index) => (
+    <div class="gallery-item" data-index={index}>
+      <img
+        src={image}
+        alt={`${alt} ${index + 1}`}
+        loading="lazy"
+        class="gallery-image"
+      />
+    </div>
+  ))}
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+  <button class="lightbox-prev" aria-label="Previous image">‹</button>
+  <button class="lightbox-next" aria-label="Next image">›</button>
+  <div class="lightbox-content">
+    <img src="" alt="" id="lightbox-image" />
+  </div>
+  <div class="lightbox-counter"></div>
+</div>
+
+<style>
+  .image-gallery {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .image-gallery[data-columns="3"] {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .image-gallery[data-columns="2"] {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+
+  .image-gallery[data-columns="4"] {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  @media (max-width: 768px) {
+    .image-gallery[data-columns="3"],
+    .image-gallery[data-columns="4"] {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .image-gallery[data-columns="2"] {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    aspect-ratio: 4/3;
+    background: #f5f5f5;
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover .gallery-image {
+    transform: scale(1.05);
+  }
+
+  /* Lightbox Styles */
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox.active {
+    display: flex;
+  }
+
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #lightbox-image {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  .lightbox-close,
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding: 1rem;
+    transition: background 0.3s ease;
+    z-index: 10001;
+    border-radius: 4px;
+  }
+
+  .lightbox-close:hover,
+  .lightbox-prev:hover,
+  .lightbox-next:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .lightbox-close {
+    top: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    line-height: 1;
+    padding: 0.5rem 1rem;
+  }
+
+  .lightbox-prev {
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .lightbox-next {
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .lightbox-counter {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .lightbox-prev,
+    .lightbox-next {
+      font-size: 2rem;
+      padding: 0.5rem;
+    }
+
+    .lightbox-close {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+<script>
+  // Lightbox functionality
+  let currentIndex = 0;
+  let galleryImages: string[] = [];
+
+  function initLightbox() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image') as HTMLImageElement;
+    const closeBtn = document.querySelector('.lightbox-close');
+    const prevBtn = document.querySelector('.lightbox-prev');
+    const nextBtn = document.querySelector('.lightbox-next');
+    const counter = document.querySelector('.lightbox-counter');
+
+    // Collect all image sources
+    galleryImages = Array.from(galleryItems).map(item => {
+      const img = item.querySelector('img');
+      return img?.src || '';
+    });
+
+    function openLightbox(index: number) {
+      currentIndex = index;
+      if (lightboxImage && lightbox) {
+        lightboxImage.src = galleryImages[currentIndex];
+        lightboxImage.alt = `Gallery image ${currentIndex + 1} of ${galleryImages.length}`;
+        lightbox.classList.add('active');
+        updateCounter();
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeLightbox() {
+      if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+      if (lightboxImage) {
+        lightboxImage.src = galleryImages[currentIndex];
+        updateCounter();
+      }
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % galleryImages.length;
+      if (lightboxImage) {
+        lightboxImage.src = galleryImages[currentIndex];
+        updateCounter();
+      }
+    }
+
+    function updateCounter() {
+      if (counter) {
+        counter.textContent = `${currentIndex + 1} / ${galleryImages.length}`;
+      }
+    }
+
+    // Event listeners
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', () => openLightbox(index));
+    });
+
+    closeBtn?.addEventListener('click', closeLightbox);
+    prevBtn?.addEventListener('click', showPrev);
+    nextBtn?.addEventListener('click', showNext);
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox?.classList.contains('active')) return;
+
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showPrev();
+      if (e.key === 'ArrowRight') showNext();
+    });
+
+    // Close on backdrop click
+    lightbox?.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLightbox);
+  } else {
+    initLightbox();
+  }
+</script>

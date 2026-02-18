@@ -10,13 +10,21 @@ interface Props {
 }
 
 const { currentLang, currentPath = '' } = Astro.props;
+
+// Helper to generate correct URL based on language
+const getUrl = (path: string) => {
+  return `/${currentLang}/${path}`;
+};
+
+// Get base URL for assets
+const base = import.meta.env.BASE_URL;
 ---
 
 <header class="site-header">
   <div class="header-container">
     <div class="header-logo">
-      <a href={currentLang === 'en' ? '/' : `/${currentLang}`}>
-        <img src="/images/logo.png" alt="WARNED Logo" />
+      <a href={`/${currentLang}`}>
+        <img src={`${base}images/logo.png`} alt="WARNED Logo" />
       </a>
     </div>
 
@@ -28,10 +36,18 @@ const { currentLang, currentPath = '' } = Astro.props;
       </button>
 
       <ul class="nav-menu">
-        <li><a href={`/${currentLang}/events`}>{t(currentLang, 'nav.events')}</a></li>
-        <li><a href={`/${currentLang}/events/calendar`}>{t(currentLang, 'nav.calendar')}</a></li>
-        <li><a href={`/${currentLang}/give`}>{t(currentLang, 'nav.give')}</a></li>
-        <li><a href={`/${currentLang}/join`}>{t(currentLang, 'nav.join')}</a></li>
+        <li><a href={getUrl('warned')}>{t(currentLang, 'nav.about')}</a></li>
+        <li class="nav-item has-dropdown">
+          <a href={getUrl('events')}>{t(currentLang, 'nav.events')}</a>
+          <ul class="dropdown-menu">
+            <li><a href={getUrl('events/calendar')}>{t(currentLang, 'nav.calendar')}</a></li>
+            <li><a href={getUrl('the-dansant')}>{t(currentLang, 'nav.theDansant')}</a></li>
+            <li><a href={getUrl('the-au-jardin')}>{t(currentLang, 'nav.theAuJardin')}</a></li>
+            <li><a href={getUrl('chantage')}>{t(currentLang, 'nav.chantage')}</a></li>
+          </ul>
+        </li>
+        <li><a href={getUrl('give')}>{t(currentLang, 'nav.give')}</a></li>
+        <li><a href={getUrl('join')}>{t(currentLang, 'nav.join')}</a></li>
         <li><a href="mailto:info@warned.plus" class="contact-button">{t(currentLang, 'nav.contact')}</a></li>
       </ul>
 
@@ -78,11 +94,60 @@ const { currentLang, currentPath = '' } = Astro.props;
     align-items: center;
   }
 
+  .nav-item {
+    position: relative;
+  }
+
   .nav-menu a {
     font-weight: 500;
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 0.05em;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .has-dropdown > a::after {
+    content: ' ▾';
+    font-size: 0.8em;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .has-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-menu li {
+    padding: 0;
+  }
+
+  .dropdown-menu a {
+    padding: 0.75rem 1.5rem;
+    text-transform: none;
+    font-size: 0.85rem;
+    transition: background 0.2s ease;
+  }
+
+  .dropdown-menu a:hover {
+    background: var(--color-secondary);
   }
 
   .contact-button {
@@ -127,12 +192,32 @@ const { currentLang, currentPath = '' } = Astro.props;
       visibility: hidden;
       transition: all 0.3s ease;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      align-items: stretch;
     }
 
     .nav-menu.active {
       transform: translateY(0);
       opacity: 1;
       visibility: visible;
+    }
+
+    .dropdown-menu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+      background: transparent;
+    }
+
+    .has-dropdown > a::after {
+      content: ' ▾';
+    }
+
+    .dropdown-menu a {
+      padding: 0.5rem 1rem;
     }
   }
 </style>

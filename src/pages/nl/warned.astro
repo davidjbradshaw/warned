@@ -1,0 +1,417 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ImageGallery from '../../components/ImageGallery.astro';
+
+const base = import.meta.env.BASE_URL;
+
+// WARNED community gallery images
+const communityImages = [
+  `${base}images/squarespace/116873449_935542003629785_7296864894493598189_n__1_.jpg`,
+  `${base}images/squarespace/148864926_695875434412085_2656654398241171247_n.jpg`,
+  `${base}images/squarespace/163889760_717267048939590_7184625663090818825_n.jpg`,
+  `${base}images/squarespace/190452515_748861962446765_6427275459551632264_n.jpg`,
+  `${base}images/squarespace/244379831_823729688293325_6357936052483367602_n.jpg`,
+  `${base}images/squarespace/244390811_823727464960214_5723369371419271371_n.jpg`,
+  `${base}images/squarespace/244625533_823729691626658_8770589097166957863_n.jpg`,
+  `${base}images/squarespace/245431878_828092181190409_2322328500546551357_n.jpg`,
+  `${base}images/squarespace/272074521_883502835649343_3860363117654774734_n.jpg`,
+  `${base}images/squarespace/78713136_667873663743331_9049748542259724288_n__1_.jpg`,
+  `${base}images/squarespace/20230712_185715.jpg`,
+  `${base}images/squarespace/20230809_174439.jpg`,
+  `${base}images/squarespace/_DSC9588__1_.jpg`,
+  `${base}images/squarespace/_DSC9659.jpg`,
+  `${base}images/squarespace/_DSC9681.jpg`,
+];
+---
+
+<BaseLayout
+  title="WARNED"
+  description="We Are Retired Not Expired - Ontdek de missie van WARNED om de wereld van senioren te revolutioneren"
+  lang="nl"
+  currentPath="warned"
+>
+  <div class="page-header with-hero hero-warned">
+    <div class="container">
+      <h1>We Are Retired Not ExpireD!</h1>
+    </div>
+  </div>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="why-warned">
+        <h2>Waarom WARNED</h2>
+
+        <p>
+          De stad accentueert het gevoel van isolement: ontmoetingsplekken verdwijnen, buurtrelaties verzwakken en leeftijdsdiscriminatie sluipt door de samenleving. Vooral in steden zijn ouderen kwetsbaar voor eenzaamheid en sociaal isolement. Dat kan ernstige gevolgen hebben voor hun gezondheid. Studies suggereren dat eenzaamheid het risico op vroegtijdig overlijden met een kwart of meer kan verhogen en even schadelijk kan zijn als het roken van 15 sigaretten per dag. Het is de verantwoordelijkheid van ons allemaal om intergenerationele verbinding aan te moedigen en ouderen uit eenzaamheid te halen.
+        </p>
+
+        <p>
+          We zijn vandaag getuige van een nieuw fenomeen: er is meer tijd beschikbaar voor de huidige generatie senioren. De levensduur is zo verlengd dat we na onze pensionering nog twintig, dertig of soms zelfs veertig jaar voor ons hebben liggen. Wat te doen met dat cadeau? Welke projecten kunnen we bedenken die geschikt, lonend, realistisch en inventief zijn? Hoe kan een positieve 'verouderingscultuur' ontstaan ​​die senioren betere leefomstandigheden biedt en betekenis geeft aan wat ze ervaren? We moeten intelligent en creatief zijn om 'duurzaam ouder worden' direct aan te pakken. Dit is waar WARNED om de hoek komt kijken.
+        </p>
+
+        <p>
+          <strong>WARNED - We Are Retired Not ExpireD</strong> - is een non-profitorganisatie die zich inzet voor het creëren van unieke initiatieven, evenementen en activiteiten die de seniorengemeenschap activeren. We willen een revolutie teweegbrengen in de wereld van senioren door actief leeftijdsdiscriminatie te bestrijden en de positieve rol van gepensioneerden in de samenleving te benadrukken. Wij helpen senioren - <strong>GOLDIES</strong> - om een ​​actiever en bevredigender sociaal leven na te streven en plezier te hebben! We bevorderen intergenerationele relaties en sociale cohesie. Wij voegen waarde toe door het delen en overdragen van professionele vaardigheden. We moedigen senioren aan om hun leeftijd met vertrouwen en trots te vieren.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="container">
+      <h2>Onze Gemeenschap</h2>
+      <p class="section-intro">Bekijk onze WARNED gemeenschap in actie - verbinden, vieren en het leven ten volle leven!</p>
+
+      <ImageGallery images={communityImages} alt="WARNED gemeenschap foto" columns={3} />
+    </div>
+  </section>
+
+  <section class="pillars-section">
+    <div class="container">
+      <h2>Onze Pijlers</h2>
+      <p class="section-intro">Deze drie filosofische pijlers vormen de basis van alle WARNED-initiatieven</p>
+
+      <div class="grid grid-3">
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <img src={`${base}images/social-01.jpg`} alt="Sociale Verbinding" />
+          </div>
+          <h3>Sociale Verbinding</h3>
+          <p>
+            Onze <strong>Thé Dansant</strong>- en <strong>Jardin</strong>-activiteiten benadrukken de sociale verbinding tussen GOLDIES en hun gemeenschap via vriendschap en persoonlijke relaties. Door een ondersteunende, veilige en leuke omgeving te bieden, moedigen we intergenerationele vermenging, peer-to-peer relaties en actieve deelname aan.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <img src={`${base}images/physical.jpg`} alt="Emotioneel Welzijn" />
+          </div>
+          <h3>Emotioneel Welzijn</h3>
+          <p>
+            De kern van ons <strong>Third Date</strong>-initiatief is de overtuiging dat alle GOLDIES in hun dagelijks leven de ruimte moeten hebben om zelfvertrouwen te ontwikkelen, het gevoel van eigenwaarde te vergroten en hun stemming te verbeteren. We maken er een prioriteit van om emotionele steun te bieden en zo mensen te helpen groeien.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <img src={`${base}images/professional-01.jpg`} alt="Professionele Kracht" />
+          </div>
+          <h3>Professionele Kracht</h3>
+          <p>
+            Onze <strong>Third Act</strong>-initiatieven vieren de professionele ervaring die al onze GOLDIES te bieden hebben, in al hun expertisegebieden. We erkennen de blijvende vitaliteit van een senior personeelsbestand door projecten te creëren die professionele verbinding en kennisuitwisseling bevorderen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values-section">
+    <div class="container">
+      <h2>Onze Waarden</h2>
+      <p class="section-intro">Deze drie pijlers - en de bijbehorende initiatieven - stimuleren volgende waarden bij onze medewerkers, vrijwilligers, artiesten en de gemeenschap van GOLDIES.</p>
+
+      <div class="grid grid-3">
+        <div class="value-card">
+          <h3>Inclusiviteit</h3>
+          <p>We zijn ruimdenkend en respecteren verschillen. Iedereen is even welkom, ongeacht geslacht, seksualiteit, ras, religie, politiek, burgerlijke staat of beroep.</p>
+        </div>
+
+        <div class="value-card">
+          <h3>Deelname</h3>
+          <p>Zelfexpressie en participatie staan ​​centraal. Er zijn geen toeschouwers! Iedereen wordt aangemoedigd om volledig deel te nemen aan alle activiteiten en vrijuit hun individualiteit uit te drukken.</p>
+        </div>
+
+        <div class="value-card">
+          <h3>Autonomie</h3>
+          <p>We willen dat iedereen zich autonoom voelt - vooral fysiek, sociaal en emotioneel. We moedigen al onze deelnemers aan om zich vrij te voelen om te bewegen en zich te uiten.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits-section">
+    <div class="container">
+      <h2>Onze Voordelen</h2>
+      <p class="section-intro">Onze pijlers en waarden leveren langdurige voordelen op voor onze GOLDIE-gemeenschap. Deze voordelen zijn bedoeld om hun dagelijks leven positief te veranderen.</p>
+
+      <div class="grid grid-3">
+        <div class="benefit-card">
+          <h3>Persoonlijke Relaties</h3>
+          <p>Het vinden en ontwikkelen van zinvolle kameraadschap, liefde, vreugde en vriendschap.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Spontaniteit en Nieuwsgierigheid</h3>
+          <p>De dag plukken en actief nieuwsgierig zijn naar elke nieuwe ervaring.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Intellectuele Betrokkenheid</h3>
+          <p>Het aangaan van activiteiten die ons uitdagen om met moed en vertrouwen na te denken, te reflecteren en te reageren.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Intimiteit</h3>
+          <p>Het vinden van emotionele intimiteit tussen partners/vrienden en het (opnieuw) ontwaken van iemands sensuele, seksuele en spirituele zelf.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Vrijgevigheid</h3>
+          <p>Tijd maken voor elkaar en daarin vaardigheden, expertise en empathie vrij delen met de mensen om ons heen.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3>Co-Creatie</h3>
+          <p>Samenwerken om een gevoel van trots en maatschappelijke verantwoordelijkheid in onze gemeenschap mogelijk te maken.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="goldies-section">
+    <div class="container">
+      <h2>GOLDIES</h2>
+
+      <div class="goldies-content">
+        <div class="goldies-text">
+          <p>
+            De <strong>GOLDIES</strong> - de gemeenschap van seniors van 65 jaar en ouder - zijn het kloppend hart van WARNED. Ze zijn allemaal even welkom op activiteiten en evenementen die WARNED creëert, ongeacht hun geslacht, gender, seksualiteit, afkomst, politieke voorkeur, religie, economische achtergrond of beroep.
+          </p>
+
+          <p>
+            Bij WARNED streven we ernaar het <strong>FLAMINGOLD</strong> in al onze GOLDIES te bevrijden. De roze flamingo is de perfecte belichaming van de geest van de GOLDIE, want hij toont zich als meester der emoties, samenwerking, openheid en liefde, en is daarbij nog eens charmant, sierlijk en sereen. De flamingo symboliseert traditioneel een sociale natuur en het verlangen om gemeenschapsbanden te smeden waarin we allemaal kunnen vertrouwen.
+          </p>
+
+          <p>
+            Belangrijker nog, de flamingo vertegenwoordigt de late bloei van schoonheid en zelfvertrouwen. Geboren grijs en bleek, krijgt hij zijn kenmerkende kleur met de leeftijd - net zoals onze GOLDIES worden aangemoedigd om met trots te bloeien tijdens hun seniorenjaren.
+          </p>
+        </div>
+
+        <div class="goldies-images">
+          <img src={`${base}images/GOLDIE_1.jpeg`} alt="WARNED GOLDIES gemeenschapsleden" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section">
+    <div class="container">
+      <h2>Wat Onze GOLDIES Zeggen</h2>
+
+      <div class="grid grid-2">
+        <div class="testimonial-card">
+          <blockquote>
+            <p>"Ga ervoor, je moraal zal op zijn hoogst zijn"</p>
+            <cite>Laurence</cite>
+          </blockquote>
+        </div>
+
+        <div class="testimonial-card">
+          <blockquote>
+            <p>"Het is echt een remedie tegen eenzaamheid"</p>
+            <cite>Christine</cite>
+          </blockquote>
+        </div>
+
+        <div class="testimonial-card">
+          <blockquote>
+            <p>"Zou gesponsord moeten worden door de sociale zekerheid"</p>
+            <cite>Lorette</cite>
+          </blockquote>
+        </div>
+
+        <div class="testimonial-card">
+          <blockquote>
+            <p>"Het is leuk, ontspannen, ongecompliceerd en zonder enig verschil in sociale klasse: het is de Joie de Vivre"</p>
+            <cite>Christian</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Word Lid van de WARNED Gemeenschap</h2>
+      <p>Word lid en help ons onze missie voort te zetten om de sociale, persoonlijke en professionele ontwikkeling van onze GOLDIE-gemeenschap te activeren.</p>
+      <div class="cta-buttons">
+        <a href="/nl/join" class="button">Lid Worden</a>
+        <a href="/nl/give" class="button button-secondary">Steun WARNED</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    padding: 4rem 0;
+  }
+
+  section:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    font-size: 2.5rem;
+  }
+
+  .section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .why-warned p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-light);
+  }
+
+  .pillar-card,
+  .value-card,
+  .benefit-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .pillar-card:hover,
+  .value-card:hover,
+  .benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .pillar-icon {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .pillar-icon img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .pillar-card h3,
+  .value-card h3,
+  .benefit-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .pillar-card p,
+  .value-card p,
+  .benefit-card p {
+    color: var(--color-text-light);
+    line-height: 1.6;
+  }
+
+  .goldies-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .goldies-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-light);
+  }
+
+  .goldies-images img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .testimonials-section {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  }
+
+  .testimonial-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .testimonial-card blockquote {
+    margin: 0;
+  }
+
+  .testimonial-card p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .testimonial-card cite {
+    display: block;
+    text-align: right;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #c41e3a 100%);
+    color: white;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .button-secondary {
+    background: white;
+    color: var(--color-primary);
+  }
+
+  .button-secondary:hover {
+    background: #f5f5f5;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+
+    .goldies-content {
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
